@@ -6,9 +6,9 @@ let imagesLoaded = 0;
 let totalImagesLoaded = 0;
 let photosArray = [];
 
-const count = 5;
+let count = 5;
 const apiKey = "hzk2_QIEdAlNj1LDA2TDbuLcXek4NojEmxPfP1MY0p0";
-const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
+let apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 // Check if all images were loaded
 function allImagesLoaded() {
@@ -16,6 +16,7 @@ function allImagesLoaded() {
     if (imagesLoaded === totalImagesLoaded) {
         ready = true;
         loader.hidden = true;
+        count = 30;
     }
 }
 
